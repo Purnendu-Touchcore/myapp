@@ -43,7 +43,11 @@ function App() {
   const updateTodo = async (id, updateData) => {
     try {
       const response = await axios.put(`${API_BASE_URL}/todos/${id}`, updateData);
-      setTodos(todos.map((todo) => (todo._id === id ? response.data : todo))); // eslint-disable-line no-underscore-dangle
+      const updatedTodos = todos.map((todo) => (
+        // eslint-disable-next-line no-underscore-dangle
+        todo._id === id ? response.data : todo
+      ));
+      setTodos(updatedTodos);
       setEditingTodo(null);
       setError(null);
     } catch (err) {
@@ -96,7 +100,8 @@ function App() {
             <TodoForm
               todo={editingTodo}
               onSubmit={editingTodo
-                ? (data) => updateTodo(editingTodo._id, data) // eslint-disable-line no-underscore-dangle
+                // eslint-disable-next-line no-underscore-dangle
+                ? (data) => updateTodo(editingTodo._id, data)
                 : createTodo}
               onCancel={() => setEditingTodo(null)}
             />

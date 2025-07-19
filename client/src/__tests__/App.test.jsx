@@ -16,6 +16,7 @@ jest.mock('axios', () => ({
 const axios = require('axios');
 
 // Mock console.error to avoid noise in tests
+// eslint-disable-next-line no-console
 const originalError = console.error;
 beforeAll(() => {
   // eslint-disable-next-line no-console

@@ -40,7 +40,7 @@ beforeEach(() => {
   mockTodos.length = 0;
   // eslint-disable-next-line global-require
   // eslint-disable-next-line global-require
-      const Todo = require('../models/Todo');
+  const Todo = require('../models/Todo');
   Object.assign(Todo, mockTodo);
 });
 
