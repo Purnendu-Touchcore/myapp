@@ -1,0 +1,27 @@
+{
+  "name": "mern-todo-app",
+  "version": "1.0.0",
+  "description": "A MERN stack todo list application with CRUD functionality",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:start\"",
+    "start": "npm run server:start",
+    "server:start": "cd server && npm start",
+    "server:dev": "cd server && npm run dev",
+    "client:start": "cd client && npm start",
+    "client:build": "cd client && npm run build",
+    "test": "npm run test:server && npm run test:client",
+    "test:server": "cd server && npm test",
+    "test:client": "cd client && npm test -- --coverage --watchAll=false",
+    "lint": "npm run lint:server && npm run lint:client",
+    "lint:server": "cd server && npm run lint",
+    "lint:client": "cd client && npm run lint",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "keywords": ["mern", "todo", "react", "node", "express", "mongodb"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

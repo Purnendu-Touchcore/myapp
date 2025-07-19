@@ -1,0 +1,26 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "airbnb",
+    "airbnb/hooks"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "no-console": "warn",
+    "react/prop-types": "off"
+  }
+}
