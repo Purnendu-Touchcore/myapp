@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom app styles */
+.App {
+  text-align: center;
+}
+
+/* Additional custom styles can go here */
